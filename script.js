@@ -112,7 +112,9 @@ function initHeaderScroll() {
   const header = document.querySelector(".site-header");
   if (!header) return;
 
-  const applyState = () => header.classList.toggle("is-scrolled", window.scrollY > 12);
+  const applyState = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 12);
+  };
   applyState();
   window.addEventListener("scroll", applyState, { passive: true });
 }

@@ -292,19 +292,10 @@ button { font-family: inherit; cursor: pointer; }
   object-fit: contain;
 }
 
-.nav-center {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
 .nav-links {
   display: flex;
   align-items: center;
   gap: 6px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-links a {
@@ -2862,4 +2853,233 @@ body.dark-mode .stats-bar .hero-stats > .stat-card > .stat-label {
     height: 132px !important;
     padding: 20px !important;
   }
+}
+
+/* =========================================================
+   FINAL MOBILE-ONLY POLISH
+   Keeps desktop/tablet layouts unchanged.
+   ========================================================= */
+@media (max-width: 760px) {
+  /* Prevent any component from creating a horizontal page overflow. */
+  html, body { max-width: 100%; overflow-x: hidden; }
+  .container { width: min(100% - 28px, 1180px); }
+
+  /* One card per row on phones: cleaner reading rhythm. */
+  .card-grid,
+  .product-grid { grid-template-columns: 1fr !important; }
+
+  /* Contact form: each paired field stacks vertically. */
+  .contact-grid { grid-template-columns: 1fr !important; gap: 22px; }
+  .form-card { width: 100%; padding: 26px 18px; box-sizing: border-box; }
+  .form-row { grid-template-columns: 1fr !important; gap: 0; margin-bottom: 0; }
+  .form-row .field { width: 100%; min-width: 0; }
+  .field input,
+  .field select,
+  .field textarea { width: 100%; max-width: 100%; box-sizing: border-box; }
+
+  /* Give the contact heading a little breathing room on narrow screens. */
+  .form-card h2 { font-size: 1.35rem !important; }
+  .form-card > p { margin-bottom: 22px !important; }
+
+  /* More deliberate mobile section rhythm. */
+  .section { padding: 54px 0; }
+  .section-head { margin-bottom: 32px; padding: 0 4px; }
+  .section-head h2 { font-size: 1.65rem; }
+  .section-head p { font-size: .98rem; line-height: 1.65; }
+
+  /* Category/feature cards: full width, consistent height and spacing. */
+  .pillar-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 22px;
+  }
+
+  /* Keep the hero comfortable without allowing oversized text to push sideways. */
+  .hero h1 { font-size: clamp(2rem, 9vw, 2.65rem); line-height: 1.08; }
+  .hero p.lede { font-size: 1rem; line-height: 1.65; }
+  .hero-actions { width: 100%; justify-content: center; }
+  .hero-actions .btn { width: min(100%, 360px); }
+
+  /* Stats remain one per row and compact. */
+  .stats-bar .hero-stats { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .stats-bar .hero-stats > .stat-card {
+    min-height: 116px !important;
+    height: 116px !important;
+    padding: 18px 16px !important;
+  }
+  .stats-bar .hero-stats > .stat-card > .stat-number { font-size: 44px !important; }
+  .stats-bar .hero-stats > .stat-card > .stat-label { margin-top: 10px !important; font-size: .9rem; }
+
+  /* Product search/filter controls wrap naturally instead of squeezing. */
+  .filter-bar { gap: 8px; }
+  .filter-btn { padding: 8px 14px; font-size: .82rem; }
+  .search-row { flex-direction: column; }
+  .search-input { width: 100%; min-width: 0; box-sizing: border-box; }
+
+  /* Image sections stay readable on a phone. */
+  .image-banner { min-height: 460px; }
+  .image-banner-content { width: min(100% - 32px, 680px); text-align: center; }
+  .image-banner-content h1,
+  .image-banner-content h2,
+  .image-banner-content p { max-width: 100%; }
+
+  /* CTA stacks cleanly and keeps the action button inside the card. */
+  .cta-band { width: 100%; box-sizing: border-box; }
+  .cta-band .btn { width: min(100%, 320px); }
+
+  /* Contact info cards use the full phone width. */
+  .info-card { width: 100%; box-sizing: border-box; padding: 22px; }
+  .map-embed { width: 100%; overflow: hidden; }
+
+  /* Footer stays single-column and readable. */
+  .site-footer .container { padding-left: 20px; padding-right: 20px; }
+  .footer-grid { grid-template-columns: 1fr !important; }
+  .footer-column { width: 100%; box-sizing: border-box; }
+  .footer-brand { font-size: 1.05rem; }
+  .footer-bottom { font-size: .78rem; line-height: 1.5; }
+}
+
+
+/* =========================================================
+   FINAL STABILITY PASS — clean navbar + true mobile catalogue
+   ========================================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 76px;
+  box-sizing: border-box;
+  overflow: visible;
+  transition: box-shadow .2s ease;
+}
+
+.site-header.is-scrolled { box-shadow: 0 8px 24px rgba(8,40,56,.24); }
+
+.nav {
+  position: relative;
+  height: 76px;
+  min-height: 76px;
+  box-sizing: border-box;
+  padding: 10px 24px !important;
+}
+
+/* Do not change navbar geometry when the page scrolls. */
+.site-header.is-scrolled .nav {
+  height: 76px;
+  min-height: 76px;
+  padding: 10px 24px !important;
+}
+
+.brand { flex-shrink: 0; white-space: nowrap; }
+
+@media (max-width: 680px) {
+  .site-header {
+    height: 72px;
+  }
+
+  .nav,
+  .site-header.is-scrolled .nav {
+    height: 72px;
+    min-height: 72px;
+    padding: 8px 14px !important;
+    gap: 8px;
+  }
+
+  .brand {
+    font-size: 1.16rem !important;
+    line-height: 1;
+    gap: 7px;
+  }
+
+  .brand-mark {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .nav-toggle {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  /* Closed menu is completely removed from interaction and paint.
+     This prevents the initial partial-menu/flicker seen on mobile. */
+  .nav-center {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box;
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    max-height: none !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transform-origin: top center;
+    transition: opacity .16s ease, transform .16s ease, visibility 0s linear .16s;
+    border-top: 0 !important;
+  }
+
+  .nav-center.is-open {
+    padding: 10px 14px 14px !important;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition: opacity .16s ease, transform .16s ease, visibility 0s linear 0s;
+  }
+
+  .nav-links {
+    width: 100%;
+    margin: 0 !important;
+    gap: 3px;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 14px;
+  }
+
+  .theme-toggle {
+    align-self: flex-start;
+    margin-top: 5px;
+  }
+
+  /* Product catalogue: one full-width card per row on phones. */
+  .product-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px !important;
+  }
+
+  .product-card {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* Some mobile browsers report a CSS viewport just above 680px.
+   Use coarse-pointer detection so phones still receive the one-card layout. */
+@media (max-width: 900px) and (hover: none) and (pointer: coarse) {
+  .product-grid { grid-template-columns: minmax(0, 1fr) !important; }
+}
+
+/* Hard safety net for any phone/tablet viewport below 900px. */
+@media (max-width: 900px) {
+  .nav-center { box-sizing: border-box; }
 }
