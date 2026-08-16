@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Everest Pharma — Pharmaceutical Care & Product Portfolio</title>
+<meta name="description" content="Explore Everest Pharma's current product portfolio across gastro, liver, pain, respiratory, women's health, nutrition and anti-infective care.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="Everest Pharma logo" class="brand-mark">
+      Everest Pharma
+    </a>
+    <div class="nav-center">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Switch theme">
+        <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span></button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero-slider" id="heroSlider">
+    <div class="hero-slide active" style="background-image:url('images/image 1.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/image 2.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/image 3.jpg')"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-slider-content">
+      <span class="eyebrow">Trusted since 1998</span>
+      <h1>Medicines built around care, clarity and purpose.</h1>
+      <p class="lede">Explore Everest Pharma's current portfolio across digestive &amp; liver care, pain &amp; inflammation, respiratory &amp; allergy, women's health, nutrition and anti-infective care.</p>
+      <div class="hero-actions">
+        <a href="products.html" class="btn btn-primary btn-pulse">Explore our medicines</a>
+        <a href="contact.html" class="btn btn-outline">Talk to our team</a>
+      </div>
+    </div>
+    <div class="hero-slider-dots" role="tablist" aria-label="Featured images">
+      <button class="hero-dot active" data-slide="0" aria-label="Show slide 1"></button>
+      <button class="hero-dot" data-slide="1" aria-label="Show slide 2"></button>
+      <button class="hero-dot" data-slide="2" aria-label="Show slide 3"></button>
+    </div>
+  </section>
+
+  <section class="stats-bar">
+    <div class="container hero-stats">
+      <div class="stat-card">
+        <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7 7.5 12 4l5 3.5v6L12 17l-5-3.5v-6Z" stroke="currentColor" stroke-width="1.7"/><path d="m7 7.5 5 3.2 5-3.2M12 10.7V17" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+        <span class="stat-number" data-target="16">0</span><span class="stat-label">Current product profiles</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M9 3h6M10 3v5l-4.5 8.2A2.5 2.5 0 0 0 7.7 20h8.6a2.5 2.5 0 0 0 2.2-3.8L14 8V3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.1 14h7.8" stroke="currentColor" stroke-width="1.7"/></svg></span>
+        <span class="stat-number" data-target="7">0</span><span class="stat-label">Therapeutic focus areas</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3.2 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+        <span class="stat-number" data-target="1998">0</span><span class="stat-label">Established since</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="pulse-divider" aria-hidden="true"><svg viewBox="0 0 800 72" preserveAspectRatio="none"><path class="pulse-line-path" d="M0 36 H285 L316 36 L338 7 L362 61 L384 22 L405 36 H800"/></svg></div>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">About Everest</span>
+        <h2>A portfolio shaped around real therapeutic needs</h2>
+        <p>The current client material brings together focused formulations for digestive, liver, pain, respiratory, nutritional, women's health and anti-infective care.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="pillar-card reveal">
+          <div class="pillar-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M12 4v16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <h3>Digestive &amp; liver care</h3>
+          <p>Zetaraft, Zetacid-40, Zetacid-DSR and Ever Hep address the portfolio's gastro and liver focus.</p>
+        </div>
+        <div class="pillar-card reveal" style="--d:.1s">
+          <div class="pillar-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M5 7h14M6.5 17h11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <h3>Pain, inflammation &amp; joints</h3>
+          <p>Evesprint-SP, Rutoart and Evertend cover pain, swelling, recovery and joint-support positioning.</p>
+        </div>
+        <div class="pillar-card reveal" style="--d:.2s">
+          <div class="pillar-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3v6M9 9c-2.2 0-4 2.2-4 5.2 0 2.8 1 5.8 3 5.8 1.5 0 2-1 2-2.8V9zM15 9c2.2 0 4 2.2 4 5.2 0 2.8-1 5.8-3 5.8-1.5 0-2-1-2-2.8V9z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Respiratory &amp; wellness</h3>
+          <p>Pulmoend, Warkast, Everactive, Irofirst and Ever D3 extend the portfolio into respiratory and everyday nutritional support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="image-banner" style="background-image:url('images/image 4.jpg')">
+    <div class="container image-banner-content reveal">
+      <span class="eyebrow">Our portfolio</span>
+      <h2>From targeted therapy to everyday wellness</h2>
+      <p>Each product profile is organised around its composition, key information and applications as supplied in the client's product literature.</p>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Featured products</span>
+        <h2>Explore the current Everest Pharma range</h2>
+        <p>Browse the complete catalogue for product-level details and therapeutic grouping.</p>
+      </div>
+      <div class="card-grid">
+        <div class="pillar-card reveal"><span class="timeline-year">GASTRO</span><h3>ZETARAFT</h3><p>Alginate, bicarbonate and calcium carbonate oral suspension for the gastro portfolio.</p><a class="text-link" href="products.html">View product →</a></div>
+        <div class="pillar-card reveal" style="--d:.1s"><span class="timeline-year">LIVER</span><h3>Ever Hep</h3><p>Multi-ingredient liver-support formulation presented for hepatoprotection and metabolic restoration.</p><a class="text-link" href="products.html">View product →</a></div>
+        <div class="pillar-card reveal" style="--d:.2s"><span class="timeline-year">PAIN</span><h3>Rutoart</h3><p>Trypsin, bromelain and rutoside trihydrate combination positioned around inflammation and recovery.</p><a class="text-link" href="products.html">View product →</a></div>
+        <div class="pillar-card reveal"><span class="timeline-year">RESPIRATORY</span><h3>Warkast</h3><p>Montelukast and levocetirizine combination for allergy and airway-related indications.</p><a class="text-link" href="products.html">View product →</a></div>
+        <div class="pillar-card reveal" style="--d:.1s"><span class="timeline-year">WOMEN'S HEALTH</span><h3>Gestgold</h3><p>Natural micronised progesterone in soft-gelatin and sustained-release formats.</p><a class="text-link" href="products.html">View product →</a></div>
+        <div class="pillar-card reveal" style="--d:.2s"><span class="timeline-year">ANTI-INFECTIVE</span><h3>ECEP</h3><p>Cefpodoxime oral suspension and ECEP-200 tablets form the current antibiotic range.</p><a class="text-link" href="products.html">View product →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-band reveal">
+        <div class="cta-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 10.5a7 7 0 0 1 14 0v4.1a2.4 2.4 0 0 1-2.4 2.4h-1.4v-4.6h3.8M5 10.5v2h-1.4v2.1A2.4 2.4 0 0 0 6 17h1.4v-4.6H5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 19h5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="cta-copy"><h2>Looking for a specific medicine?</h2><p>Search the complete current catalogue or speak with the Everest Pharma team.</p></div>
+        <a href="products.html" class="btn btn-primary">View all products <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-column footer-about">
+        <div class="footer-brand"><img src="logo.png" alt="Everest Pharma logo" class="brand-mark">Everest Pharma</div>
+        <p>Pharmaceutical products across digestive &amp; liver care, pain &amp; inflammation, respiratory &amp; allergy, nutrition and more.</p>
+      </div>
+      <div class="footer-column"><h4>Company</h4><ul><li><a href="index.html#about">About us</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-column"><h4>Products</h4><ul><li><a href="products.html">Gastro Care</a></li><li><a href="products.html">Liver Care</a></li><li><a href="products.html">Respiratory &amp; Allergy</a></li><li><a href="products.html">Women's Health</a></li><li><a href="products.html">Vitamins &amp; Nutrition</a></li><li><a href="products.html">Bone &amp; Joint Care</a></li><li><a href="products.html">Anti-infective</a></li></ul></div>
+      <div class="footer-column footer-contact"><h4>Contact</h4><ul><li><a href="mailto:theeverestpharma@gmail.com">theeverestpharma@gmail.com</a></li><li><a href="tel:+18005550134">+1 (800) 555-0134</a></li><li>221 Meridian Ave, Suite 400</li><li>Columbus, OH 43215, United States</li></ul><h4 class="media-heading">Media</h4><div class="contact-socials" aria-label="Everest Pharma social media"><a href="https://www.instagram.com/theeverestpharma/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.1" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.7" r="1" fill="currentColor"/></svg></a><a href="https://www.facebook.com/profile.php?id=61593332973833" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M13.3 20v-7h2.3l.35-2.6H13.3V8.75c0-.75.21-1.25 1.3-1.25h1.45V5.17c-.25-.03-1.1-.1-2.1-.1-2.08 0-3.5 1.27-3.5 3.61v1.72H8.1V13h2.35v7" fill="currentColor"/></svg></a></div></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Everest Pharma. All rights reserved.</span><span>Registered pharmaceutical manufacturer — License No. PH-88213</span></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<button class="scroll-top" id="scrollTop" type="button" aria-label="Scroll to top" title="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 14l6-6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+</body>
+</html>
