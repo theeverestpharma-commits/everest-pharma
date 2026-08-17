@@ -2992,8 +2992,8 @@ body.dark-mode .stats-bar .hero-stats > .stat-card > .stat-label {
   }
 
   .brand-mark {
-    width: 42px !important;
-    height: 42px !important;
+    width: 46px !important;
+    height: 46px !important;
   }
 
   .nav-toggle {
@@ -3082,4 +3082,234 @@ body.dark-mode .stats-bar .hero-stats > .stat-card > .stat-label {
 /* Hard safety net for any phone/tablet viewport below 900px. */
 @media (max-width: 900px) {
   .nav-center { box-sizing: border-box; }
+}
+
+
+/* =========================================================
+   Brand tagline — subtle premium descriptor
+   ========================================================= */
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+  line-height: 1;
+}
+
+.brand-name {
+  display: block;
+  line-height: 1.05;
+}
+
+.brand-tagline {
+  display: block;
+  margin-top: 4px;
+  font-family: "Nunito", "Sora", "Segoe UI", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.14em;
+  text-transform: none;
+  white-space: nowrap;
+  background: linear-gradient(180deg, #F2F5F2 0%, #D7E0D8 22%, #A6C2AA 45%, #F4F7F4 64%, #91AD97 82%, #DDE7DE 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  opacity: .96;
+  text-shadow: 0 1px 1px rgba(0,0,0,.18), 0 0 7px rgba(166,194,170,.08);
+}
+
+.footer-brand {
+  align-items: flex-start;
+}
+
+.footer-brand-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  line-height: 1;
+}
+
+.footer-brand-name {
+  display: block;
+  line-height: 1.1;
+}
+
+.footer-brand-tagline {
+  display: block;
+  margin-top: 5px;
+  font-family: "Nunito", "Sora", "Segoe UI", sans-serif;
+  font-size: 0.66rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  color: #79B7D1;
+  white-space: nowrap;
+}
+
+@media (max-width: 680px) {
+  .brand-tagline {
+    margin-top: 3px;
+    font-size: 0.60rem;
+    letter-spacing: 0.10em;
+  }
+
+  .footer-brand-tagline {
+    font-size: 0.58rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+/* Final navbar brand sizing refinement. */
+@media (min-width: 681px) {
+  .brand-mark {
+    width: 52px !important;
+    height: 52px !important;
+  }
+}
+
+/* Keep the existing metallic treatment on the brand name itself after adding the tagline. */
+.brand {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  color: #8FEA8B !important;
+}
+
+.brand-name {
+  font: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  background: linear-gradient(
+    180deg,
+    #D8FFD4 0%,
+    #9DF59A 20%,
+    #43C83E 46%,
+    #B9FFB3 64%,
+    #2D9E35 82%,
+    #8EEB88 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 1px 1px rgba(0,0,0,.28), 0 0 10px rgba(67,200,62,.10);
+}
+
+.brand:hover .brand-name,
+.brand:focus-visible .brand-name {
+  background: linear-gradient(
+    180deg,
+    #E1FFDE 0%,
+    #B6FFB0 28%,
+    #43C83E 50%,
+    #D1FFCC 70%,
+    #3AA63E 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* =========================================================
+   Final tagline refinement
+   Navbar: stronger hierarchy + subtle silver divider.
+   Footer: darker tagline for light-theme readability.
+   ========================================================= */
+.brand-copy .brand-name {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.brand-copy .brand-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,.18) 0%,
+    rgba(232,238,240,.92) 48%,
+    rgba(255,255,255,.18) 100%
+  );
+  box-shadow: 0 0 3px rgba(255,255,255,.16);
+}
+
+.brand-tagline {
+  margin-top: 5px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.095em;
+  line-height: 1.1;
+  background: linear-gradient(
+    180deg,
+    #FFFFFF 0%,
+    #DDE5E8 25%,
+    #9FB0B8 48%,
+    #F4F7F8 67%,
+    #A9BAC1 84%,
+    #E8EEF0 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 1px 1px rgba(0,0,0,.22), 0 0 7px rgba(220,232,236,.08);
+}
+
+.footer-brand-tagline {
+  color: #315B70;
+}
+
+@media (max-width: 680px) {
+  .brand-copy .brand-name {
+    padding-bottom: 3px;
+  }
+
+  .brand-copy .brand-name::after {
+    height: 1px;
+  }
+
+  .brand-tagline {
+    margin-top: 4px;
+    font-size: 0.68rem;
+    letter-spacing: 0.07em;
+  }
+}
+
+/* Preserve readable contrast for the footer tagline in dark mode. */
+body.dark-mode .footer-brand-tagline {
+  color: #8DB9CA;
+}
+
+
+/* Final brand lockup refinement: slightly larger logo + wider navbar tagline. */
+@media (min-width: 681px) {
+  .brand-mark {
+    width: 52px !important;
+    height: 52px !important;
+  }
+}
+
+.brand-tagline {
+  word-spacing: 0.34em;
+}
+
+@media (max-width: 680px) {
+  .brand-mark {
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  .brand-tagline {
+    word-spacing: 0.28em;
+  }
 }
