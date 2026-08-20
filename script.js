@@ -299,9 +299,32 @@ const productData = [
     }
   },
   {
+    name: "Esprint-P",
+    generic: "Aceclofenac 100mg + Paracetamol 325mg Tablets",
+    category: "Antibiotics",
+    rx: true,
+    form: "Tablet",
+    tagline: "Targeted Pain Relief.",
+    desc: "A combination tablet positioned for the management of pain and inflammation.",
+    details: {
+      composition: "Aceclofenac 100mg + Paracetamol 325mg.",
+      benefits: [
+        "Helps relieve pain and inflammation",
+        "Aceclofenac provides anti-inflammatory and analgesic action",
+        "Paracetamol provides analgesic and antipyretic action"
+      ],
+      indications: [
+        "Musculoskeletal pain",
+        "Joint and inflammatory pain",
+        "Dental and post-operative pain",
+        "Other painful inflammatory conditions as directed by a healthcare professional"
+      ]
+    }
+  },
+  {
     name: "Evesprint-SP",
     generic: "Aceclofenac 100mg + Paracetamol 325mg + Serratiopeptidase 15mg Tablets",
-    category: "Pain & Inflammation",
+    category: "Antibiotics",
     rx: true,
     form: "Tablet",
     tagline: "Triple Action. Triple Relief.",
@@ -325,7 +348,7 @@ const productData = [
   {
     name: "Ever Hep",
     generic: "Metadoxine 500mg + Silymarin 140mg + L-Ornithine L-Aspartate 150mg + Lecithin 200mg + L-Taurine 50mg + Pyridoxine HCl 6mg + Folic Acid 1.5mg Tablets",
-    category: "Liver Care",
+    category: "Hepatology",
     rx: true,
     form: "Tablet",
     tagline: "Revive Your Liver, Renew Your Life.",
@@ -425,7 +448,7 @@ const productData = [
   {
     name: "Gestgold",
     generic: "Natural Micronised Progesterone 200mg Soft Gelatin Capsules & 300mg (SR) Tablets",
-    category: "Women's Health",
+    category: "Gynaecology",
     rx: true,
     form: "Soft gelatin capsule / SR tablet",
     tagline: "Trusted Hormonal Harmony. Naturally Delivered.",
@@ -478,7 +501,7 @@ const productData = [
   {
     name: "Pulmoend",
     generic: "Dextromethorphan HBr 10mg + Chlorpheniramine Maleate 2mg/5ml Syrup",
-    category: "Respiratory & Allergy",
+    category: "Pulmonology",
     rx: true,
     form: "Syrup",
     tagline: "Soothes the Cough. Clears the Air.",
@@ -504,7 +527,7 @@ const productData = [
   {
     name: "Warkast",
     generic: "Montelukast Sodium 10mg + Levocetirizine Dihydrochloride 5mg Tablets",
-    category: "Respiratory & Allergy",
+    category: "Pulmonology",
     rx: true,
     form: "Tablet",
     tagline: "Breathe Easy. Live Freely.",
@@ -577,7 +600,7 @@ const productData = [
   {
     name: "Evertend",
     generic: "Collagen Peptide Type II 60mg + Sodium Hyaluronate 30mg + L-Arginine 500mg + Chondroitin Sulphate 200mg + Vitamin D 100IU + Vitamin C 40mg Tablet",
-    category: "Bone & Joint",
+    category: "Orthopedics",
     rx: false,
     form: "Tablet",
     tagline: "Restore, Rebuild & Revitalize your joints from within.",
@@ -604,7 +627,7 @@ const productData = [
   {
     name: "Rutoart",
     generic: "Trypsin 48mg + Bromelain 90mg + Rutoside Trihydrate 100mg Tablets",
-    category: "Pain & Inflammation",
+    category: "Orthopedics",
     rx: true,
     form: "Tablet",
     tagline: "Heal Faster. Move Better.",
@@ -659,13 +682,13 @@ let activeSearch = "";
 // recognizable silhouette instead of relying on color alone.
 const CATEGORY_ICONS = {
   "Gastro Care": '<path d="M8 3c-1 3-3 4-3 8a7 7 0 0014 0c0-2-1-3-3-4-1.5-.6-2-1.5-2-3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="13.5" r="1.3" fill="currentColor" stroke="none"/>',
-  "Liver Care": '<path d="M4 9.5c1-3 4-5.5 8-5.5 5 0 9 3 9 7.2 0 5-4 8.3-9 8.3-3 0-6-1-7-3-1-2 .2-3-.7-5-.6-1.2-.6-1.2.7-2z" stroke-linecap="round" stroke-linejoin="round"/>',
-  "Pain & Inflammation": '<rect x="3.5" y="10.3" width="17" height="7.2" rx="3.6" transform="rotate(-25 12 14)"/><path d="M12 2.5l1 2.6h2.6l-2 1.9.7 2.6-2.3-1.6-2.3 1.6.7-2.6-2-1.9h2.6z" fill="currentColor" stroke="none"/>',
-  "Respiratory & Allergy": '<path d="M12 3v6" stroke-linecap="round"/><path d="M9 9c-2.2 0-4 2.2-4 5.2 0 2.8 1 5.8 3 5.8 1.5 0 2-1 2-2.8V9z" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 9c2.2 0 4 2.2 4 5.2 0 2.8-1 5.8-3 5.8-1.5 0-2-1-2-2.8V9z" stroke-linecap="round" stroke-linejoin="round"/>',
+  "Hepatology": '<path d="M4 9.5c1-3 4-5.5 8-5.5 5 0 9 3 9 7.2 0 5-4 8.3-9 8.3-3 0-6-1-7-3-1-2 .2-3-.7-5-.6-1.2-.6-1.2.7-2z" stroke-linecap="round" stroke-linejoin="round"/>',
+  "Antibiotics": '<rect x="3.5" y="10.3" width="17" height="7.2" rx="3.6" transform="rotate(-25 12 14)"/><path d="M12 2.5l1 2.6h2.6l-2 1.9.7 2.6-2.3-1.6-2.3 1.6.7-2.6-2-1.9h2.6z" fill="currentColor" stroke="none"/>',
+  "Pulmonology": '<path d="M12 3v6" stroke-linecap="round"/><path d="M9 9c-2.2 0-4 2.2-4 5.2 0 2.8 1 5.8 3 5.8 1.5 0 2-1 2-2.8V9z" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 9c2.2 0 4 2.2 4 5.2 0 2.8-1 5.8-3 5.8-1.5 0-2-1-2-2.8V9z" stroke-linecap="round" stroke-linejoin="round"/>',
   "Antibiotics": '<path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 9.5v5M9.5 12h5" stroke-linecap="round"/>',
-  "Women's Health": '<circle cx="12" cy="9" r="5.2"/><path d="M12 14.2V21M8.7 17.8h6.6" stroke-linecap="round"/>',
+  "Gynaecology": '<circle cx="12" cy="9" r="5.2"/><path d="M12 14.2V21M8.7 17.8h6.6" stroke-linecap="round"/>',
   "Vitamins & Wellness": '<path d="M5 19c0-7.2 4-13 13-14-1 8-6 13-13 14z" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.2 17.8c2-3 5-6 9.8-9" stroke-linecap="round"/>',
-  "Bone & Joint": '<path d="M8 5.5a3 3 0 10-4 4.5l4.5 4.5a3 3 0 104 4l-4.5-4.5A3 3 0 108 5.5z" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 18.5a3 3 0 104-4.5l-4.5-4.5a3 3 0 10-4-4l4.5 4.5A3 3 0 0016 18.5z" stroke-linecap="round" stroke-linejoin="round"/>',
+  "Orthopedics": '<path d="M8 5.5a3 3 0 10-4 4.5l4.5 4.5a3 3 0 104 4l-4.5-4.5A3 3 0 108 5.5z" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 18.5a3 3 0 104-4.5l-4.5-4.5a3 3 0 10-4-4l4.5 4.5A3 3 0 0016 18.5z" stroke-linecap="round" stroke-linejoin="round"/>',
 };
 
 function categoryIconSVG(category) {
