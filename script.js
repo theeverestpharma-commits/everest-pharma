@@ -919,6 +919,7 @@ function initContactForm() {
       _template: "table",
       _captcha: "true",
       _replyto: email,
+      _cc: "theeverestpharma@gmail.com",
       _url: window.location.href
     };
 
@@ -931,7 +932,7 @@ function initContactForm() {
     status.className = "form-status show";
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/theeverestpharma@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/info@theeverestpharma.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -953,7 +954,7 @@ function initContactForm() {
       form.reset();
     } catch (error) {
       console.error("Contact form submission failed:", error);
-      status.textContent = "We couldn't send your message right now. Please email theeverestpharma@gmail.com directly.";
+      status.textContent = "We couldn't send your message right now. Please email info@theeverestpharma.com directly.";
       status.className = "form-status show error";
     } finally {
       if (submitButton) {
