@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://everestpharma.net/sitemap.xml
+Sitemap: https://theeverestpharma.com/sitemap.xml

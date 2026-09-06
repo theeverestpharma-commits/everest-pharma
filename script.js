@@ -178,6 +178,7 @@ function initStatCounters() {
   const animateCounter = (el) => {
     const target = parseInt(el.dataset.target, 10) || 0;
     const suffix = el.dataset.suffix || "";
+    const finalDisplay = el.dataset.final || "";
     const duration = 1400;
     const start = performance.now();
 
@@ -185,7 +186,9 @@ function initStatCounters() {
       const progress = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
       const value = Math.round(target * eased);
-      el.textContent = value.toLocaleString() + suffix;
+      el.textContent = progress >= 1 && finalDisplay
+        ? finalDisplay
+        : value.toLocaleString() + suffix;
       if (progress < 1) {
         requestAnimationFrame(tick);
       } else {
@@ -299,7 +302,7 @@ const productData = [
     }
   },
   {
-    name: "Esprint-P",
+    name: "Evesprint-P",
     generic: "Aceclofenac 100mg + Paracetamol 325mg Tablets",
     category: "Antibiotics",
     rx: true,
