@@ -3252,36 +3252,22 @@ body.dark-mode .stats-bar .hero-stats > .stat-card > .stat-label {
   font-size: inherit;
   font-weight: inherit;
   letter-spacing: inherit;
-  background: linear-gradient(
-    180deg,
-    #D8FFD4 0%,
-    #9DF59A 20%,
-    #43C83E 46%,
-    #B9FFB3 64%,
-    #2D9E35 82%,
-    #8EEB88 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  text-shadow: 0 1px 1px rgba(0,0,0,.28), 0 0 10px rgba(67,200,62,.10);
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: #FFFFFF;
+  color: #FFFFFF;
+  text-shadow: none;
 }
 
 .brand:hover .brand-name,
 .brand:focus-visible .brand-name {
-  background: linear-gradient(
-    180deg,
-    #E1FFDE 0%,
-    #B6FFB0 28%,
-    #43C83E 50%,
-    #D1FFCC 70%,
-    #3AA63E 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: #FFFFFF;
+  color: #FFFFFF;
+  text-shadow: none;
 }
 
 /* =========================================================
@@ -3301,13 +3287,8 @@ body.dark-mode .stats-bar .hero-stats > .stat-card > .stat-label {
   right: 0;
   bottom: 0;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    rgba(255,255,255,.18) 0%,
-    rgba(232,238,240,.92) 48%,
-    rgba(255,255,255,.18) 100%
-  );
-  box-shadow: 0 0 3px rgba(255,255,255,.16);
+  background: #FFFFFF;
+  box-shadow: none;
 }
 
 .brand-tagline {
@@ -3316,20 +3297,12 @@ body.dark-mode .stats-bar .hero-stats > .stat-card > .stat-label {
   font-weight: 800;
   letter-spacing: 0.095em;
   line-height: 1.1;
-  background: linear-gradient(
-    180deg,
-    #FFFFFF 0%,
-    #DDE5E8 25%,
-    #9FB0B8 48%,
-    #F4F7F8 67%,
-    #A9BAC1 84%,
-    #E8EEF0 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  text-shadow: 0 1px 1px rgba(0,0,0,.22), 0 0 7px rgba(220,232,236,.08);
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: #FFFFFF;
+  color: #FFFFFF;
+  text-shadow: none;
 }
 
 .footer-brand-tagline {
@@ -3382,12 +3355,14 @@ body.dark-mode .footer-brand-tagline {
 }
 
 
-/* Rootweb website credit — kept inside the existing footer-bottom row. */
+/* Rootweb website credit — placed on its own line below the footer details. */
 .footer-credit {
-  position: absolute;
-  left: 50%;
-  bottom: 12px;
-  transform: translateX(-50%);
+  position: static;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  flex-basis: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -3418,7 +3393,67 @@ body.dark-mode .footer-credit a:focus-visible { color: #FFFFFF; }
 
 @media (max-width: 680px) {
   .footer-credit {
-    bottom: 9px;
     font-size: 0.68rem;
+  }
+}
+
+/* Reference-style navbar tagline: icon-led Trust | Care | Wellness lockup. */
+.brand-tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.72rem;
+  margin-top: 5px;
+  font-family: "Nunito", "Sora", "Segoe UI", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #FFFFFF !important;
+  white-space: nowrap;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  text-shadow: none !important;
+}
+
+.tagline-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.34rem;
+}
+
+.tagline-icon {
+  width: 1.18rem;
+  height: 1.18rem;
+  flex: 0 0 auto;
+  color: #FFFFFF;
+}
+
+.tagline-divider {
+  width: 1px;
+  height: 1.35rem;
+  background: rgba(255,255,255,.92);
+  flex: 0 0 auto;
+}
+
+@media (max-width: 680px) {
+  .brand-tagline {
+    gap: 0.48rem;
+    font-size: 0.60rem;
+    letter-spacing: 0.01em;
+  }
+
+  .tagline-item {
+    gap: 0.22rem;
+  }
+
+  .tagline-icon {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
+  .tagline-divider {
+    height: 1rem;
   }
 }
